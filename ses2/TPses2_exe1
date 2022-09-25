@@ -1,0 +1,47 @@
+TP2
+
+EXERCICE 1:
+ 
+1) an integer is stored in 32 bits.
+
+2) an integer is stored in 4 bytes.  
+
+3) 	#include <stdio.h>
+	#include <stdlib.h>
+	#include <math.h>
+
+	int main()
+	{
+	  printf("%d\n" , 1 >> 1);
+	  printf ("%d\n" , 1 << 1);
+	  printf ("%d\n" , 1 << 2);
+	  return (0);
+	}
+	
+	if we run the following program we get this output:
+
+	0
+	2
+	4
+
+  explain: 
+_____________1 is stored in 32 bits but for the sake of clarity i will only portray the last 2 bytes----
+--the first printf has 1 >> 1 which means shift the binary representation of 1 to the right by one bit, in the machine it   		translates to going from (0000 0001) to (0000 0000) hence the output 0.
+--the second printf has 1<<1 which means shift the binary representation of 1 to the left by one bit, meaning
+it goes from (0000 0001) to (0000 0010) which is 2 in binary, hence the output.
+--the same goes for the third printf, only this time we shift to the left by two digits, going from (0000 0001) to (0000 0100) which is 4.
+--When shifting left, the most-significant bit is lost, and a 000 bit is inserted on the other end.
+	0010 << 1  →  0100
+	0010 << 2  →  1000
+	so shifting by n is like multiplying by 2^n.
+
+
+4) the range of values, that could be stored in an unsigned char is: from 0 to 255.
+
+5) the range of values, that could be stored in a char is: from 128 to 127.
+
+6) the bit which is reserved to represent the sign, in the case of an integer is: The Most Significant Bit, (the one in the most left) 
+
+
+
+
